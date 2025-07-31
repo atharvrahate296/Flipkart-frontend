@@ -30,7 +30,7 @@ function Signup() {
     }
 
     const res = await fetch(
-      `${import.meta.env.RENDER_API_URL}/auth/signup`,
+      'https://flipkart-backend-66ux.onrender.com/auth/signup',
       {
         method: "POST",
         body: JSON.stringify({ email, password }),

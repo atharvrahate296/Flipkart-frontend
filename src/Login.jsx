@@ -12,7 +12,7 @@ function Login() {
   const handleLogin = async () => {
     setError("");
     const res = await fetch(
-      `${import.meta.env.RENDER_API_URL}/auth/login`,
+      'https://flipkart-backend-66ux.onrender.com/auth/login',
       {
         method: "POST",
         body: JSON.stringify({ email, password }),
