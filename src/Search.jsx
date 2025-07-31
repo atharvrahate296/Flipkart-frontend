@@ -12,7 +12,7 @@ function Search() {
   const query = useQuery().get("q") || "";
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/products`)
+    fetch(`${import.meta.env.RENDER_API_URL}/products`)
       .then((res) => res.json())
       .then((data) => {
         let allProducts = [];

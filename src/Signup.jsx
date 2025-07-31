@@ -30,7 +30,7 @@ function Signup() {
     }
 
     const res = await fetch(
-      `${import.meta.env.VITE_API_URL}/auth/signup`,
+      `${import.meta.env.RENDER_API_URL}/auth/signup`,
       {
         method: "POST",
         body: JSON.stringify({ email, password }),

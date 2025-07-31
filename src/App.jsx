@@ -149,7 +149,7 @@ function AppContent({ products }) {
                                       <button
                                         className="w-full bg-blue-600 text-white py-1 rounded hover:bg-blue-700 transition"
                                         onClick={() => {
-                                          fetch(`${import.meta.env.VITE_API_URL}/cart/add`,
+                                          fetch(`${import.meta.env.RENDER_API_URL}/cart/add`,
                                             {
                                               method: "POST",
                                               headers: {
@@ -181,7 +181,7 @@ function AppContent({ products }) {
                                       <button
                                         className="w-full bg-green-600 text-white py-1 rounded hover:bg-green-700 transition"
                                         onClick={() => {
-                                          fetch(`${import.meta.env.VITE_API_URL}/cart/add`,
+                                          fetch(`${import.meta.env.RENDER_API_URL}/cart/add`,
                                             {
                                               method: "POST",
                                               headers: {
@@ -248,7 +248,7 @@ function AppContent({ products }) {
 function App() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/products`)
+    fetch(`${import.meta.env.RENDER_API_URL}/products`)
       .then((res) => res.json())
       .then((data) => {
         let allProducts = [];
