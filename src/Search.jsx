@@ -12,7 +12,7 @@ function Search() {
   const query = useQuery().get("q") || "";
 
   useEffect(() => {
-    fetch("https://flipkart-backend-os9f.onrender.com/products")
+    fetch(`${import.meta.env.VITE_API_URL}/products`)
       .then((res) => res.json())
       .then((data) => {
         let allProducts = [];
